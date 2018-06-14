@@ -16,6 +16,6 @@ O WordPress também suporta o banco de dados **MariaDB**. Quem desejar usar esse
 Para começar a versionar este tema, clone este projeto dentro da pasta de temas do WordPress que está rodando em seu computador, seguindo as instruções abaixo:
 
 1. No seu WordPress local, entre na pasta `/wp-content/themes`. Crie uma pasta chamada `/pong-rn`.
-2. No prompt de comando ou emulador de terminal, entre dentro da pasta `/pong-rn` que você acabou de criar e clone o repositório com o comando `git clone https://github.com/pongrn/wp-theme-pong.git .`. Digite seu usuário e senha do GitHub, caso necessário.
+2. No prompt de comando ou emulador de terminal, entre dentro da pasta `/pong-rn` que você acabou de criar e clone o repositório com o comando `git clone https://github.com/pongrn/wp-theme-pong.git .` (atente-se ao espaço e ao ponto logo depois da URL no comando). Digite seu usuário e senha do GitHub, caso necessário.
 
 Dessa maneira, poderemos desenvolver o tema e imediatamente testá-lo no nosso WordPress local.
