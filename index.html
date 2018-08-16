@@ -17,67 +17,67 @@
     <body>
         <!-- Cabeçalho -->
         <header>
-            <!-- Faixa do logotipo e navegação -->
-            <div class="header-desktop">
-                <div class="area-logo row">
-                    <div class="small-12 medium-3 large-3 column">
-                        <a href="#"><img src="img/logo.png"></a>
-                    </div>
-                    <div class="small-12 medium-9 large-9 column">
-                        (Talvez um banner?)
-                    </div>
+            <div class="area-logo row">
+                <div class="small-11 small-centered medium-3 medium-uncentered large-3 large-uncentered column">
+                    <a href="#"><img src="img/logo.png"></a>
                 </div>
-                <div class="nav-menu row">
-                    <div class="small-12 medium-12 large-12 column">
-                        <nav class="top-bar" data-topbar role="navigation">
-                            <ul class="title-area show-for-small-only">
-                                <li class="name">
-                                    <h1><a href="#">My Site</a></h1>
-                                </li>
-                                <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-                                <li class="toggle-topbar menu-icon"><a href="#"><span><!--Menu--></span></a></li>
-                            </ul>
-
-                            <section class="top-bar-section">
-                                <!-- Left Nav Section -->
-                                <ul class="left">
-                                    <li class="active"><a href="#">Menu</a></li>
-                                    <li class="has-dropdown">
-                                        <a href="#">Menu</a>
-                                        <ul class="dropdown">
-                                            <li><a href="#">Menu</a></li>
-                                            <li class="active"><a href="#">Menu</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </section>
-                        </nav>
-                    </div>
+                <div class="small-12 medium-9 large-9 column show-for-medium-up">
+                    (Talvez um banner?)
                 </div>
             </div>
         </header>
 
+        <section class="navegacao">
+            <div class="row collapse">
+                <div class="small-12 medium-12 large-12 column">
+                    <nav class="top-bar" data-topbar role="navigation">
+                        <ul class="title-area show-for-small-only">
+                            <li class="name">
+                                <!-- <h1><a href="#">My Site</a></h1> -->
+                            </li>
+                            <li class="toggle-topbar menu-icon"><a href="#"><span><!--Menu--></span></a></li>
+                        </ul>
+
+                        <section class="top-bar-section">
+                            <ul class="left">
+                                <li class="active"><a href="#">Menu</a></li>
+                                <li class="has-dropdown">
+                                    <a href="#">Menu</a>
+                                    <ul class="dropdown">
+                                        <li><a href="#">Menu</a></li>
+                                        <li class="active"><a href="#">Menu</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </section>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
         <!-- Slideshow -->
-        <section class="slideshow">
+        <section class="destaques">
             <div class="row">
-                <div class="slideshow-wrapper small-12 medium-12 large-12 column">
-                    <div class="slideshow-home">
-                        <div class="slide">
+                <div class="secao-titulo small-12 medium-12 large-12 column">
+                    <h1>Destaques</h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="destaques-wrapper small-11 small-centered medium-12 medium-uncentered large-12 large-uncentered column">
+                    <div class="row collapse">
+                        <div class="small-12 medium-8 large-8 column">
+                            <a href="#"><img src="http://via.placeholder.com/800x400?text=Post+01"></a>
+                        </div>
+                        <div class="small-12 medium-4 large-4 column">
                             <div class="row collapse">
-                                <div class="small-12 medium-8 large-8 column">
-                                    <a href="#"><img src="http://via.placeholder.com/800x400?text=Post+01"></a>
+                                <div class="small-12 medium-12 large-12 column">
+                                    <a href="#"><img src="http://via.placeholder.com/800x400?text=Post+02"></a>
                                 </div>
-                                <div class="small-12 medium-4 large-4 column">
-                                    <div class="row collapse">
-                                        <div class="small-12 medium-12 large-12 column">
-                                            <a href="#"><img src="http://via.placeholder.com/800x400?text=Post+02"></a>
-                                        </div>
-                                    </div>
-                                    <div class="row collapse">
-                                        <div class="small-12 medium-12 large-12 column">
-                                            <a href="#"><img src="http://via.placeholder.com/800x400?text=Post+03"></a>
-                                        </div>
-                                    </div>
+                            </div>
+                            <div class="row collapse">
+                                <div class="small-12 medium-12 large-12 column">
+                                    <a href="#"><img src="http://via.placeholder.com/800x400?text=Post+03"></a>
                                 </div>
                             </div>
                         </div>
@@ -89,7 +89,13 @@
         <!-- Conteúdo -->
         <section class="conteudo">
             <div class="row">
-                <div class="noticias-wrapper small-12 medium-12 large-12 column">
+                <div class="secao-titulo small-12 medium-12 large-12 column">
+                    <h1>Últimas notícias</h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="noticias-wrapper small-11 small-centered medium-12 medium-uncentered large-12 large-uncentered column">
                     <div class="row collapse">
                         <div class="noticia small-12 medium-4 large-4 column left">
                             <a href="#">
@@ -120,6 +126,24 @@
                                 <img src="https://placeimg.com/800/600/nature">
                             </a>
                         </div>
+                        
+                        <div class="noticia small-12 medium-4 large-4 column left">
+                            <a href="#">
+                                <img src="https://placeimg.com/800/600/nature">
+                            </a>
+                        </div>
+                        
+                        <div class="noticia small-12 medium-4 large-4 column left">
+                            <a href="#">
+                                <img src="https://placeimg.com/800/600/nature">
+                            </a>
+                        </div>
+                        
+                        <div class="noticia small-12 medium-4 large-4 column left">
+                            <a href="#">
+                                <img src="https://placeimg.com/800/600/nature">
+                            </a>
+                        </div>
 
                         <div class="noticia small-12 medium-4 large-4 column left">
                             <a href="#">
@@ -131,35 +155,86 @@
             </div>
         </section>
 
+        <section class="devs">
+            <div class="row">
+                <div class="secao-titulo small-12 medium-12 large-12 column">
+                    <h1>Desenvolvedores e estúdios potiguares</h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="small-11 small-centered medium-12 medium-uncentered large-12 large-uncentered column">
+                    <div class="slideshow-logos">
+                        <div class="slide">
+                            <a href="#">
+                                <img src="http://via.placeholder.com/250x200?text=Logo">
+                            </a>
+                        </div>
+
+                        <div class="slide">
+                            <a href="#">
+                                <img src="http://via.placeholder.com/250x200?text=Logo">
+                            </a>
+                        </div>
+
+                        <div class="slide">
+                            <a href="#">
+                                <img src="http://via.placeholder.com/250x200?text=Logo">
+                            </a>
+                        </div>
+
+                        <div class="slide">
+                            <a href="#">
+                                <img src="http://via.placeholder.com/250x200?text=Logo">
+                            </a>
+                        </div>
+
+                        <div class="slide">
+                            <a href="#">
+                                <img src="http://via.placeholder.com/250x200?text=Logo">
+                            </a>
+                        </div>
+                        <div class="slide">
+                            <a href="#">
+                                <img src="http://via.placeholder.com/250x200?text=Logo">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Rodapé -->
         <footer>
             <div class="row">
-                <div class="small-12 medium-12 large-12 column">
+                <div class="small-11 small-centered medium-12 medium-uncentered large-12 large-uncentered column">
                     <div class="widgets row">
                         <div class="widget small-12 medium-4 large-4 left column">
-                            Widget
+                            01 - Culpa dolor eiusmod culpa culpa aliquip eiusmod in deserunt ut pariatur. Do duis qui nostrud non. Pariatur sunt non amet reprehenderit pariatur. Veniam eu reprehenderit ullamco elit proident pariatur labore aliquip minim non commodo est. Duis nisi ipsum velit culpa culpa tempor sit. Lorem exercitation laborum do laboris occaecat sit esse est esse incididunt ex non labore. Ea dolore veniam reprehenderit deserunt nulla veniam nulla esse cillum.
                         </div>
 
                         <div class="widget small-12 medium-4 large-4 left column">
-                            Widget
+                            02 - Incididunt minim eiusmod proident Lorem laborum aliquip laborum excepteur anim eiusmod quis aute est non. Culpa amet mollit id enim sint quis voluptate aliquip Lorem non qui. Sunt ex Lorem pariatur laboris ipsum nostrud adipisicing anim cupidatat ad sint fugiat. Reprehenderit et enim nisi minim fugiat eiusmod exercitation in mollit et fugiat enim ipsum incididunt.
                         </div>
 
                         <div class="widget small-12 medium-4 large-4 left column">
-                            Widget
+                            03 - Dolor sint occaecat nulla irure enim eiusmod. Occaecat deserunt reprehenderit ipsum tempor labore. Tempor sit consectetur ipsum tempor nulla duis exercitation cupidatat.
                         </div>
 
                         <div class="widget small-12 medium-4 large-4 left column">
-                            Widget
+                            04 - Eiusmod sint dolore velit cillum elit cillum eiusmod ut laboris. Sunt irure sint exercitation proident veniam eiusmod. Quis enim laboris id tempor excepteur minim et exercitation. Velit cupidatat est aliquip quis quis qui ut ipsum qui consequat cupidatat et.
                         </div>
 
                         <div class="widget small-12 medium-4 large-4 left column">
-                            Widget
+                            05 - Minim veniam elit est sint adipisicing mollit ex ad nisi in est qui. Lorem tempor minim tempor adipisicing eu. Proident nulla dolor esse excepteur exercitation dolore consequat Lorem proident est reprehenderit elit laborum Lorem.
                         </div>
                     </div>
 
                     <div class="creditos row">
                         <div class="small-12 medium-12 large-12 column text-center">
-                            Créditos
+                            &#169; 20??-2018 - PONG: Potiguar Indie Games<br>
+                            Desenvolvido por <a target="_blank" href="https://giancarlosilva.com.br">Giancarlo Silva</a><br>
+                            <a target="_blank" href="https://giancarlosilva.com.br/humans.txt">humans.txt</a>
                         </div>
                     </div>
                 </div>
@@ -175,12 +250,39 @@
 
             // Slick
             $(document).ready(function(){
-                $('.slideshow-home').slick({
+                // Slideshow de logotipos
+                $('.slideshow-logos').slick({
                     autoplay: true,
                     autoplaySpeed: 5000,
                     arrows: true,
                     cssEase: 'ease',
                     dots: false,
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    centerMode: true,
+                    responsive: [
+                        {
+                            breakpoint: 1024,
+                            settings: {
+                                slidesToShow: 3,
+                                slidesToScroll: 1
+                            }
+                        },
+                        {
+                            breakpoint: 640,
+                            settings: {
+                                slidesToShow: 2,
+                                slidesToScroll: 1
+                            }
+                        },
+                        {
+                            breakpoint: 480,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1
+                            }
+                        }
+                    ]
                 });
             });
         </script>
