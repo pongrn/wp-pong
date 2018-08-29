@@ -1,28 +1,30 @@
 <!doctype html>
-<html class="no-js" lang="pt-br">
+<html class="no-js" <?php language_attributes(); ?>>
     <head>
-        <meta charset="utf-8" />
+        <meta charset="<?php bloginfo('charset'); ?>" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <title>PONG - Potiguar indie Games</title>
+        <title><?php wp_title(); ?></title>
 
-        <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Roboto:300" rel="stylesheet">
+        <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" />
 
-        <link rel="stylesheet" href="css/foundation.min.css" />
-        <link rel="stylesheet" href="css/normalize.min.css" />
-        <link rel="stylesheet" href="js/slick/slick.css">
-        <link rel="stylesheet" href="js/slick/slick-theme.css">
-        <link rel="stylesheet" href="css/style.min.css" />
-
-        <script src="js/vendor/modernizr.js"></script>
+        <?php if ( is_singular() && comments_open() && get_option( 'thread_comments' )) wp_enqueue_script( 'comment-reply' ); ?>
+        
+        <?php wp_head(); ?>
     </head>
 
-    <body>
-        <!-- Cabeçalho -->
+    <body <?php body_class(); ?>>
         <header>
             <div class="area-logo row">
                 <div class="logo small-11 small-centered medium-3 medium-uncentered large-3 large-uncentered column">
-                    <a href="#"><img src="img/logo.png"></a>
+                    <?php
+                        function pong_the_custom_logo() {
+                            if ( function_exists( 'the_custom_logo' ) ) {
+                                the_custom_logo();
+                            }
+                        }
+                        pong_the_custom_logo();
+                    ?>
                 </div>
                 <div class="banner small-12 medium-9 large-9 column show-for-medium-up">
 
@@ -38,37 +40,19 @@
                             <li class="name">
                                 <!-- <h1><a href="#">My Site</a></h1> -->
                             </li>
-                            <li class="toggle-topbar menu-icon"><a href="#"><span>
-                                        <!--Menu--></span></a></li>
+                            <li class="toggle-topbar menu-icon"><a href="#"><span><!--Menu--></span></a></li>
                         </ul>
 
                         <section class="top-bar-section">
-                            <ul class="left">
-                                <li class="active"><a href="#">Menu</a></li>
-                                <li class="active"><a href="#">Menu</a></li>
-                                <li class="active"><a href="#">Menu</a></li>
-                                <li class="has-dropdown">
-                                    <a href="#">Menu</a>
-                                    <ul class="dropdown">
-                                        <li><a href="#">Menu</a></li>
-                                        <li class="active"><a href="#">Menu</a></li>
-                                    </ul>
-                                </li>
-                                <li class="has-dropdown">
-                                    <a href="#">Menu</a>
-                                    <ul class="dropdown">
-                                        <li><a href="#">Menu</a></li>
-                                        <li class="active"><a href="#">Menu</a></li>
-                                    </ul>
-                                </li>
-                                <li class="has-dropdown">
-                                    <a href="#">Menu</a>
-                                    <ul class="dropdown">
-                                        <li><a href="#">Menu</a></li>
-                                        <li class="active"><a href="#">Menu</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
+                        <?php
+                            wp_nav_menu(array(
+                                'theme_location'    => 'main-menu',
+                                'container'         => false,
+                                'menu_class'        => 'links-menu left',
+                                'walker'            => new Foundation_Walker_Nav_Menu(),
+                                'fallback_cb'       => 'wp_page_menu();'
+                            ));
+                        ?>
                         </section>
                     </nav>
                 </div>

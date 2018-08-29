@@ -61,9 +61,6 @@
             </div>
         </footer>
 
-        <script src="js/vendor/jquery.js"></script>
-        <script src="js/foundation.min.js"></script>
-        <script src="js/slick/slick.min.js"></script>
-        <script src="js/init.js"></script>
+        <?php wp_footer(); ?>
     </body>
 </html>
