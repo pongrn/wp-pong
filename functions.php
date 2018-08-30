@@ -26,7 +26,7 @@ add_filter( 'wp_title', 'pongrn_title_for_home' );
 function pongrn_title_for_home( $title )
 {
     if( empty( $title ) && ( is_home() || is_front_page() ) ) {
-        return __( 'PONG', 'theme_domain' ) . ' - ' . get_bloginfo('description');
+        return __( get_bloginfo('name'), 'theme_domain' ) . ' - ' . get_bloginfo('description');
     }
     return $title;
 }
