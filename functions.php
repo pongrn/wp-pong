@@ -72,3 +72,8 @@ class Foundation_Walker_Nav_Menu extends Walker_Nav_Menu {
         $output .= "\n$indent<ul class=\"dropdown sub-menu menu-lvl-$depth\">\n";
     }
 }
+
+/* Suporte a imagens destacadas */
+add_theme_support( 'post-thumbnails' );
+set_post_thumbnail_size( 800, 600 );
+add_image_size( 'thumbnail-index', 800, 600 , array('center', 'center') );
