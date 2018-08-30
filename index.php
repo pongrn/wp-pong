@@ -66,42 +66,36 @@
                 <div class="slideshow-logos">
                     <div class="slide">
                         <a href="#">
-                            <!-- <img src="https://placeimg.com/250/200/tech"> -->
-                            TESTE
+                            <img src="http://via.placeholder.com/250x200?text=Logo">
                         </a>
                     </div>
 
                     <div class="slide">
                         <a href="#">
-                            <!-- <img src="https://placeimg.com/250/200/tech"> -->
-                            TESTE
+                            <img src="http://via.placeholder.com/250x200?text=Logo">
                         </a>
                     </div>
 
                     <div class="slide">
                         <a href="#">
-                            <!-- <img src="https://placeimg.com/250/200/tech"> -->
-                            TESTE
+                            <img src="http://via.placeholder.com/250x200?text=Logo">
                         </a>
                     </div>
 
                     <div class="slide">
                         <a href="#">
-                            <!-- <img src="https://placeimg.com/250/200/tech"> -->
-                            TESTE
+                            <img src="http://via.placeholder.com/250x200?text=Logo">
                         </a>
                     </div>
 
                     <div class="slide">
                         <a href="#">
-                            <!-- <img src="https://placeimg.com/250/200/tech"> -->
-                            TESTE
+                            <img src="http://via.placeholder.com/250x200?text=Logo">
                         </a>
                     </div>
                     <div class="slide">
                         <a href="#">
-                            <!-- <img src="https://placeimg.com/250/200/tech"> -->
-                            TESTE
+                            <img src="http://via.placeholder.com/250x200?text=Logo">
                         </a>
                     </div>
                 </div>

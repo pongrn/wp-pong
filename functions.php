@@ -1,15 +1,15 @@
 <?php
 /* Inclusão de CSS e JavaScript no tema */
-function pong_foundation_load_styles() {
+function pongrn_load_styles() {
     wp_enqueue_style("foundation_min_css", get_template_directory_uri() . '/css/foundation.min.css', '', '5.5.3');
     wp_enqueue_style("normalize_min_css", get_template_directory_uri() . '/css/normalize.min.css');
-    wp_enqueue_style("slick_css", get_template_directory_uri() . 'js/slick/slick.css', '', '1.8.0');
+    wp_enqueue_style("slick_css", get_template_directory_uri() . '/js/slick/slick.css', '', '1.8.0');
     wp_enqueue_style("slick_theme_css", get_template_directory_uri() . '/js/slick/slick-theme.css', '', '1.8.0');
     wp_enqueue_style("style_min_css", get_template_directory_uri() . '/css/style.min.css');
 }
-add_action('wp_enqueue_scripts', 'pong_foundation_load_styles');
+add_action('wp_enqueue_scripts', 'pongrn_load_styles');
 
-function pong_foundation_load_scripts() {
+function pongrn_load_scripts() {
     wp_enqueue_script("modernizr_js", get_template_directory_uri() . '/js/vendor/modernizr.js', '', '', false);
 
     wp_enqueue_script("jquery_js", get_template_directory_uri() . '/js/vendor/jquery.js', '', '', false);
@@ -18,12 +18,12 @@ function pong_foundation_load_scripts() {
     wp_enqueue_script("slick_js", get_template_directory_uri() . '/js/slick/slick.js', 'jquery_js', '1.8.0', true);
     wp_enqueue_script("init_js", get_template_directory_uri() . '/js/init.js', 'jquery_js', '', true);
 }
-add_action('wp_enqueue_scripts', 'pong_foundation_load_scripts');
+add_action('wp_enqueue_scripts', 'pongrn_load_scripts');
 
 /* Título do site */
-add_filter( 'wp_title', 'pong_title_for_home' );
+add_filter( 'wp_title', 'pongrn_title_for_home' );
 
-function pong_title_for_home( $title )
+function pongrn_title_for_home( $title )
 {
     if( empty( $title ) && ( is_home() || is_front_page() ) ) {
         return __( 'PONG', 'theme_domain' ) . ' - ' . get_bloginfo('description');
@@ -32,14 +32,14 @@ function pong_title_for_home( $title )
 }
 
 /* Logo personalizado */
-function pong_custom_logo_setup() {
+function pongrn_custom_logo_setup() {
     add_theme_support( 'custom-logo', array(
         'height' => 100, // Altura do logotipo
         'width' => 300, // Largura do logotipo
         'flex-width' => true, // Largura flexível do logotipo
     ));
 }
-add_action( 'after_setup_theme', 'pong_custom_logo_setup' );
+add_action( 'after_setup_theme', 'pongrn_custom_logo_setup' );
 
 /* Menus personalizados */
 function register_my_menus() {
