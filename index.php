@@ -11,41 +11,80 @@
             <div class="destaques-wrapper bg-claro small-11 small-centered medium-12 medium-uncentered large-12 large-uncentered column">
                 <div class="row collapse">
                     <div class="destaque small-12 medium-8 large-8 column">
-                        <a href="#">
-                            <div class="thumb-container">
-                                <img src="https://placeimg.com/800/600/tech">
-                                <div class="thumb-texto">
-                                    <h1>Lorem ipsum</h1>
-                                    <p>12/34/5678 - XX comentários</p>
-                                </div>
-                            </div>
-                        </a>
+                        <?php
+                            $args01 = array(
+                                'offset' => 0,
+                                'posts_per_page' => 1
+                            );
+
+                            $destaque_query = new WP_Query( $args01 );
+                        ?>
+                        <?php if ( $destaque_query->have_posts() ): ?>
+                            <?php while ( $destaque_query->have_posts() ) : $destaque_query->the_post(); ?>
+                                <a href="<?php the_permalink(); ?>">
+                                    <div class="thumb-container">
+                                        <?php the_post_thumbnail('thumbnail-index'); ?>
+                                        <div class="thumb-texto">
+                                            <?php the_title('<h1>', '</h1>'); ?>
+                                            <p><?php the_time('j \d\e F \d\e Y'); ?> - <?php comments_popup_link('Nenhum comentário', '1 comentário', '% comentários', 'comments-link', ''); ?></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
+                        <?php wp_reset_postdata(); ?>
                     </div>
                     <div class="small-12 medium-4 large-4 column">
                         <div class="row collapse">
                             <div class="destaque small-12 medium-12 large-12 column">
-                                <a href="#">
-                                    <div class="thumb-container">
-                                        <img src="https://placeimg.com/800/600/tech">
-                                        <div class="thumb-texto">
-                                            <h1>Lorem ipsum</h1>
-                                            <p>12/34/5678 - XX comentários</p>
-                                        </div>
-                                    </div>
-                                </a>
+                                <?php
+                                    $args02 = array(
+                                        'offset' => 1,
+                                        'posts_per_page' => 1
+                                    );
+
+                                    $destaque_query = new WP_Query( $args02 );
+                                ?>
+                                <?php if ( $destaque_query->have_posts() ): ?>
+                                    <?php while ( $destaque_query->have_posts() ) : $destaque_query->the_post(); ?>
+                                        <a href="<?php the_permalink(); ?>">
+                                            <div class="thumb-container">
+                                                <?php the_post_thumbnail('thumbnail-index'); ?>
+                                                <div class="thumb-texto">
+                                                    <?php the_title('<h1>', '</h1>'); ?>
+                                                    <p><?php the_time('j \d\e F \d\e Y'); ?> - <?php comments_popup_link('Nenhum comentário', '1 comentário', '% comentários', 'comments-link', ''); ?></p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    <?php endwhile; ?>
+                                <?php endif; ?>
+                                <?php wp_reset_postdata(); ?>
                             </div>
                         </div>
                         <div class="row collapse">
-                            <div class="destaque small-12 medium-12 large-12 column">
-                                <a href="#">
-                                    <div class="thumb-container">
-                                        <img src="https://placeimg.com/800/600/tech">
-                                        <div class="thumb-texto">
-                                            <h1>Lorem ipsum</h1>
-                                            <p>12/34/5678 - XX comentários</p>
-                                        </div>
-                                    </div>
-                                </a>
+                        <div class="destaque small-12 medium-12 large-12 column">
+                                <?php
+                                    $args02 = array(
+                                        'offset' => 2,
+                                        'posts_per_page' => 1
+                                    );
+
+                                    $destaque_query = new WP_Query( $args02 );
+                                ?>
+                                <?php if ( $destaque_query->have_posts() ): ?>
+                                    <?php while ( $destaque_query->have_posts() ) : $destaque_query->the_post(); ?>
+                                        <a href="<?php the_permalink(); ?>">
+                                            <div class="thumb-container">
+                                                <?php the_post_thumbnail('thumbnail-index'); ?>
+                                                <div class="thumb-texto">
+                                                    <?php the_title('<h1>', '</h1>'); ?>
+                                                    <p><?php the_time('j \d\e F \d\e Y'); ?> - <?php comments_popup_link('Nenhum comentário', '1 comentário', '% comentários', 'comments-link', ''); ?></p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    <?php endwhile; ?>
+                                <?php endif; ?>
+                                <?php wp_reset_postdata(); ?>
                             </div>
                         </div>
                     </div>
@@ -113,112 +152,37 @@
         <div class="row">
             <div class="posts-wrapper bg-claro small-11 small-centered medium-12 medium-uncentered large-12 large-uncentered column">
                 <div class="row collapse">
-                    <div class="noticia small-12 medium-4 large-4 column left">
-                        <a href="#">
-                            <div class="thumb-container">
-                                <img src="https://placeimg.com/800/600/tech">
-                                <div class="thumb-texto">
-                                    <h1>Lorem ipsum</h1>
-                                    <p>12/34/5678 - XX comentários</p>
-                                </div>
+                    <?php if (have_posts()) : ?>
+                        <?php while (have_posts()) : the_post(); ?>
+                            <div class="noticia small-12 medium-4 large-4 column left">
+                                <a href="<?php the_permalink(); ?>">
+                                    <div class="thumb-container">
+                                        <?php the_post_thumbnail('thumbnail-index'); ?>
+                                        <div class="thumb-texto">
+                                            <?php the_title('<h1>', '</h1>'); ?>
+                                            <p><?php the_time('j \d\e F \d\e Y'); ?> - <?php comments_popup_link('Nenhum comentário', '1 comentário', '% comentários', 'comments-link', ''); ?></p>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-
-                    <div class="noticia small-12 medium-4 large-4 column left">
-                        <a href="#">
-                            <div class="thumb-container">
-                                <img src="https://placeimg.com/800/600/tech">
-                                <div class="thumb-texto">
-                                    <h1>Lorem ipsum</h1>
-                                    <p>12/34/5678 - XX comentários</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="noticia small-12 medium-4 large-4 column left">
-                        <a href="#">
-                            <div class="thumb-container">
-                                <img src="https://placeimg.com/800/600/tech">
-                                <div class="thumb-texto">
-                                    <h1>Lorem ipsum</h1>
-                                    <p>12/34/5678 - XX comentários</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="noticia small-12 medium-4 large-4 column left">
-                        <a href="#">
-                            <div class="thumb-container">
-                                <img src="https://placeimg.com/800/600/tech">
-                                <div class="thumb-texto">
-                                    <h1>Lorem ipsum</h1>
-                                    <p>12/34/5678 - XX comentários</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="noticia small-12 medium-4 large-4 column left">
-                        <a href="#">
-                            <div class="thumb-container">
-                                <img src="https://placeimg.com/800/600/tech">
-                                <div class="thumb-texto">
-                                    <h1>Lorem ipsum</h1>
-                                    <p>12/34/5678 - XX comentários</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="noticia small-12 medium-4 large-4 column left">
-                        <a href="#">
-                            <div class="thumb-container">
-                                <img src="https://placeimg.com/800/600/tech">
-                                <div class="thumb-texto">
-                                    <h1>Lorem ipsum</h1>
-                                    <p>12/34/5678 - XX comentários</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="noticia small-12 medium-4 large-4 column left">
-                        <a href="#">
-                            <div class="thumb-container">
-                                <img src="https://placeimg.com/800/600/tech">
-                                <div class="thumb-texto">
-                                    <h1>Lorem ipsum</h1>
-                                    <p>12/34/5678 - XX comentários</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="noticia small-12 medium-4 large-4 column left">
-                        <a href="#">
-                            <div class="thumb-container">
-                                <img src="https://placeimg.com/800/600/tech">
-                                <div class="thumb-texto">
-                                    <h1>Lorem ipsum</h1>
-                                    <p>12/34/5678 - XX comentários</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="noticia small-12 medium-4 large-4 column left">
-                        <a href="#">
-                            <div class="thumb-container">
-                                <img src="https://placeimg.com/800/600/tech">
-                                <div class="thumb-texto">
-                                    <h1>Lorem ipsum</h1>
-                                    <p>12/34/5678 - XX comentários</p>
-                                </div>
-                            </div>
-                        </a>
+                        <?php endwhile; ?>
+                    <?php else : ?>
+                        <div class="text-center">
+                            <h1>404 - Not Found</h1>
+                            <p>Post não encontrado.</p>
+                        </div>
+                    <?php endif; ?>
+                </div>
+                <div class="paginacao row">
+                    <div class="small-12 medium-12 large-12 column text-center">
+                        <?php
+                            the_posts_pagination( array(
+                                    'mid_size'  => 2,
+                                    'prev_text' => __( 'Mais antigos', 'textdomain' ),
+                                    'next_text' => __( 'Mais recentes', 'textdomain' ),
+                                )
+                            );
+                        ?>
                     </div>
                 </div>
             </div>
