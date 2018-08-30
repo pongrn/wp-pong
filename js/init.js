@@ -10,7 +10,7 @@ $(document).ready(function(){
         arrows: true,
         cssEase: 'ease',
         dots: false,
-        slidesToShow: 4,
+        slidesToShow: 3,
         slidesToScroll: 1,
         centerMode: true,
         responsive: [

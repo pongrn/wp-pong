@@ -66,36 +66,36 @@
                 <div class="slideshow-logos">
                     <div class="slide">
                         <a href="#">
-                            <img src="http://via.placeholder.com/250x200?text=Logo">
+                            <img src="http://via.placeholder.com/350x250?text=Logo">
                         </a>
                     </div>
 
                     <div class="slide">
                         <a href="#">
-                            <img src="http://via.placeholder.com/250x200?text=Logo">
+                            <img src="http://via.placeholder.com/350x250?text=Logo">
                         </a>
                     </div>
 
                     <div class="slide">
                         <a href="#">
-                            <img src="http://via.placeholder.com/250x200?text=Logo">
+                            <img src="http://via.placeholder.com/350x250?text=Logo">
                         </a>
                     </div>
 
                     <div class="slide">
                         <a href="#">
-                            <img src="http://via.placeholder.com/250x200?text=Logo">
+                            <img src="http://via.placeholder.com/350x250?text=Logo">
                         </a>
                     </div>
 
                     <div class="slide">
                         <a href="#">
-                            <img src="http://via.placeholder.com/250x200?text=Logo">
+                            <img src="http://via.placeholder.com/350x250?text=Logo">
                         </a>
                     </div>
                     <div class="slide">
                         <a href="#">
-                            <img src="http://via.placeholder.com/250x200?text=Logo">
+                            <img src="http://via.placeholder.com/350x250?text=Logo">
                         </a>
                     </div>
                 </div>
