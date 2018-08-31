@@ -177,9 +177,9 @@
                     <div class="small-12 medium-12 large-12 column text-center">
                         <?php
                             the_posts_pagination( array(
-                                    'mid_size'  => 2,
-                                    'prev_text' => __( 'Mais antigos', 'textdomain' ),
-                                    'next_text' => __( 'Mais recentes', 'textdomain' ),
+                                    'mid_size'  => 3,
+                                    'prev_text' => __( '<<', 'textdomain' ),
+                                    'next_text' => __( '>>', 'textdomain' ),
                                 )
                             );
                         ?>
