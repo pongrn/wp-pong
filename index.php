@@ -167,9 +167,11 @@
                             </div>
                         <?php endwhile; ?>
                     <?php else : ?>
-                        <div class="text-center">
-                            <h1>404 - Not Found</h1>
-                            <p>Post não encontrado.</p>
+                        <div class="noticia small-12 medium-12 large-12 column left">
+                            <div class="post-404 post-titulo text-center">
+                                <h1>404 - Not Found</h1>
+                                <p>Post não encontrado.</p>
+                            </div>
                         </div>
                     <?php endif; ?>
                 </div>
