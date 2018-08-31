@@ -79,15 +79,15 @@ set_post_thumbnail_size( 800, 600 );
 add_image_size( 'thumbnail-index', 800, 600 , array('center', 'center') );
 
 /* Suporte a widgets: Barra Lateral */
-// register_sidebar( array(
-//     'name'          => __( 'Widgets: Barra Lateral', 'pong-rn' ),
-//     'id'            => 'widgets-lateral',
-//     'description'   => __( 'Adicione Widgets para exibi-los na Barra Lateral de seu site.', 'pong-rn' ),
-//     'before_widget' => '<div class="lateral-widget small-12 medium-12 large-12 column">',
-//     'after_widget'  => '</div>',
-//     'before_title'  => '<h1 class="widget-titulo">',
-//     'after_title'   => '</h1>',
-// ) );
+register_sidebar( array(
+    'name'          => __( 'Widgets: Barra Lateral', 'pong-rn' ),
+    'id'            => 'widgets-lateral',
+    'description'   => __( 'Adicione Widgets para exibi-los na Barra Lateral de seu site.', 'pong-rn' ),
+    'before_widget' => '<div class="widget">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h1>',
+    'after_title'   => '</h1>',
+) );
 
 /* Suporte a widgets: Rodapé */
 register_sidebar( array(
