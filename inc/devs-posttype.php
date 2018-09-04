@@ -1,6 +1,6 @@
 <?php
-if ( ! function_exists('desenvolvedor') ) {
-    function desenvolvedor() {
+if ( ! function_exists('devs_post_type') ) {
+    function devs_post_type() {
         $labels = array(
             'name'                  => _x( 'Desenvolvedores(as)', 'Post Type General Name', 'pong_rn' ),
             'singular_name'         => _x( 'Desenvolvedor(a)', 'Post Type Singular Name', 'pong_rn' ),
@@ -31,7 +31,7 @@ if ( ! function_exists('desenvolvedor') ) {
             'filter_items_list'     => __( 'Filtro', 'pong_rn' ),
         );
         $args = array(
-            'label'                 => __( 'Desenvolvedor(a)', 'pong_rn' ),
+            'label'                 => __( 'Desenvolvedores', 'pong_rn' ),
             'description'           => __( 'Desenvolvedor(a), equipe ou estúdio independente', 'pong_rn' ),
             'labels'                => $labels,
             'supports'              => array( 'title', 'thumbnail', 'revisions' ),
@@ -50,7 +50,7 @@ if ( ! function_exists('desenvolvedor') ) {
             'capability_type'       => 'page',
             'show_in_rest'          => false,
         );
-        register_post_type( 'desenvolvedor', $args );
+        register_post_type( 'desenvolvedores', $args );
     }
-    add_action( 'init', 'desenvolvedor', 0 );
+    add_action( 'init', 'devs_post_type', 0 );
 }

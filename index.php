@@ -103,36 +103,23 @@
         <div class="row">
             <div class="small-11 small-centered medium-11 medium-centered large-12 large-uncentered column">
                 <div class="slideshow-logos">
-                    <!-- LOOP DE DEVS AQUI -->
-                    <div class="slide">
-                        <a href="#">
-                            <img src="http://via.placeholder.com/350x250?text=Logo">
-                        </a>
-                    </div>
+                    <?php
+                        $args = array(
+                            'post_type' => 'desenvolvedores',
+                        );
 
-                    <div class="slide">
-                        <a href="#">
-                            <img src="http://via.placeholder.com/350x250?text=Logo">
-                        </a>
-                    </div>
-
-                    <div class="slide">
-                        <a href="#">
-                            <img src="http://via.placeholder.com/350x250?text=Logo">
-                        </a>
-                    </div>
-
-                    <div class="slide">
-                        <a href="#">
-                            <img src="http://via.placeholder.com/350x250?text=Logo">
-                        </a>
-                    </div>
-
-                    <div class="slide">
-                        <a href="#">
-                            <img src="http://via.placeholder.com/350x250?text=Logo">
-                        </a>
-                    </div>
+                        $devs_query = new WP_Query( $args );
+                    ?>
+                    <?php if ( $devs_query->have_posts() ): ?>
+                        <?php while ( $devs_query->have_posts() ) : $devs_query->the_post(); ?>
+                            <div class="slide">
+                                <a href="<?php the_permalink(); ?>">
+                                    <?php the_post_thumbnail('thumbnail-devs'); ?>
+                                </a>
+                            </div>
+                        <?php endwhile; ?>
+                    <?php endif; ?>
+                    <?php wp_reset_postdata(); ?>
                 </div>
             </div>
         </div>
