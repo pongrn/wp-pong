@@ -7,7 +7,7 @@
         </div>
 
         <div class="row">
-            <article class="paginas-wrapper bg-claro small-11 small-centered medium-12 medium-uncentered large-12 large-uncentered column">
+            <article class="paginas-wrapper bg-claro small-11 small-centered medium-11 medium-centered large-12 large-uncentered column">
                 <div class="post-404 pagina-titulo text-center">
                     <h1>404 - Not Found</h1>
                     <p>Post não encontrado.</p>

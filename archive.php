@@ -7,7 +7,7 @@
         </div>
 
         <div class="row">
-            <article class="paginas-wrapper bg-claro small-11 small-centered medium-12 medium-uncentered large-12 large-uncentered column">
+            <article class="paginas-wrapper bg-claro small-11 small-centered medium-11 medium-centered large-12 large-uncentered column">
                 <div class="arquivamento">
                     <?php $post = $posts[0]; // Hack. Insira $post para que the_date() funcione. ?>
                     <?php /* Exibição por Categoria */ if (is_category()) { ?>

@@ -16,18 +16,22 @@
     <body <?php body_class(); ?>>
         <header>
             <div class="area-logo row">
-                <div class="logo small-11 small-centered medium-3 medium-uncentered large-3 large-uncentered column">
-                    <?php
-                        function pong_the_custom_logo() {
-                            if ( function_exists( 'the_custom_logo' ) ) {
-                                the_custom_logo();
-                            }
-                        }
-                        pong_the_custom_logo();
-                    ?>
-                </div>
-                <div class="banner small-12 medium-9 large-9 column show-for-medium-up">
+                <div class="small-11 small-centered medium-11 medium-centered large-12 large-uncentered column">
+                    <div class="row">
+                        <div class="logo small-12 small-centered medium-3 medium-uncentered large-3 large-uncentered column text-center">
+                            <?php
+                                function pong_the_custom_logo() {
+                                    if ( function_exists( 'the_custom_logo' ) ) {
+                                        the_custom_logo();
+                                    }
+                                }
+                                pong_the_custom_logo();
+                            ?>
+                        </div>
+                        <div class="banner small-12 medium-9 large-9 column show-for-medium-up">
 
+                        </div>
+                    </div>
                 </div>
             </div>
         </header>

@@ -8,7 +8,7 @@
         </div>
 
         <div class="row">
-            <div class="destaques-wrapper bg-claro small-11 small-centered medium-12 medium-uncentered large-12 large-uncentered column">
+            <div class="destaques-wrapper bg-claro small-11 small-centered medium-11 medium-centered large-12 large-uncentered column">
                 <div class="row collapse">
                     <div class="destaque small-12 medium-8 large-8 column">
                         <?php
@@ -101,8 +101,9 @@
         </div>
 
         <div class="row">
-            <div class="small-11 small-centered medium-12 medium-uncentered large-12 large-uncentered column">
+            <div class="small-11 small-centered medium-11 medium-centered large-12 large-uncentered column">
                 <div class="slideshow-logos">
+                    <!-- LOOP DE DEVS AQUI -->
                     <div class="slide">
                         <a href="#">
                             <img src="http://via.placeholder.com/350x250?text=Logo">
@@ -127,11 +128,6 @@
                         </a>
                     </div>
 
-                    <div class="slide">
-                        <a href="#">
-                            <img src="http://via.placeholder.com/350x250?text=Logo">
-                        </a>
-                    </div>
                     <div class="slide">
                         <a href="#">
                             <img src="http://via.placeholder.com/350x250?text=Logo">
@@ -150,7 +146,7 @@
         </div>
 
         <div class="row">
-            <div class="posts-wrapper bg-claro small-11 small-centered medium-12 medium-uncentered large-12 large-uncentered column">
+            <div class="posts-wrapper bg-claro small-11 small-centered medium-11 medium-centered large-12 large-uncentered column">
                 <div class="row collapse">
                     <?php if (have_posts()) : ?>
                         <?php while (have_posts()) : the_post(); ?>

@@ -75,8 +75,9 @@ class Foundation_Walker_Nav_Menu extends Walker_Nav_Menu {
 
 /* Suporte a imagens destacadas */
 add_theme_support( 'post-thumbnails' );
-set_post_thumbnail_size( 800, 600 );
-add_image_size( 'thumbnail-index', 800, 600 , array('center', 'center') );
+add_image_size( 'thumbnail-index', 800, 600, array('center', 'center') );
+add_image_size( 'thumbnail-devs', 350, 250, array('center', 'center') );
+add_image_size( 'thumbnail-devs-info', 500, 360, array('center', 'center') );
 
 /* Suporte a widgets: Barra Lateral */
 register_sidebar( array(
@@ -99,3 +100,6 @@ register_sidebar( array(
     'before_title'  => '<h1>',
     'after_title'   => '</h1>',
 ) );
+
+/* Custom Post Type */
+include(TEMPLATEPATH . '/inc/devs-posttype.php');

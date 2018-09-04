@@ -7,7 +7,7 @@
         </div>
 
         <div class="row">
-            <article class="paginas-wrapper bg-claro small-11 small-centered medium-12 medium-uncentered large-12 large-uncentered column">
+            <article class="paginas-wrapper bg-claro small-11 small-centered medium-11 medium-centered large-12 large-uncentered column">
                 <div class="resultados-busca">
                     <p><?php $mySearch = new WP_Query("s=$s & showposts=9999"); $num = $mySearch->post_count; echo $num.' resultado(s) de busca para o termo "'; the_search_query();?>" em <?php get_num_queries(); ?> <?php timer_stop(1); ?> segundos.</p>
                 </div>
