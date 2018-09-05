@@ -20,6 +20,12 @@ function pongrn_load_scripts() {
 }
 add_action('wp_enqueue_scripts', 'pongrn_load_scripts');
 
+/* Vídeos responsivos - YouTube, Vimeo, DailyMotion */
+function pongrn_responsive_video_oembed_script() {
+    wp_enqueue_script("responsive_video_js", get_template_directory_uri() . '/js/responsive-video.js', 'jquery_js', '', true);
+}
+add_action('wp_enqueue_scripts', 'pongrn_responsive_video_oembed_script');
+
 /* Título do site */
 add_filter( 'wp_title', 'pongrn_title_for_home' );
 
@@ -101,5 +107,16 @@ register_sidebar( array(
     'after_title'   => '</h1>',
 ) );
 
-/* Custom Post Type */
+/* Custom Post Type: Desenvolvedores(as) */
 include(TEMPLATEPATH . '/inc/devs-posttype.php');
+
+/* ACF - Página de opções do tema */
+if( function_exists('acf_add_options_page') ) {
+    acf_add_options_page(array(
+        'page_title'    => 'Opções do site',
+        'menu_title'    => 'Opções do site',
+        'menu_slug'     => 'opcoes-site',
+        'capability'    => 'edit_posts',
+        'redirect'      => false
+    ));
+}
