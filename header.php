@@ -29,7 +29,7 @@
                             ?>
                         </div>
                         <div class="banner small-12 medium-9 large-9 column show-for-medium-up">
-
+                            
                         </div>
                     </div>
                 </div>
@@ -59,6 +59,14 @@
                         ?>
                         </section>
                     </nav>
+                </div>
+            </div>
+        </section>
+
+        <section class="busca">
+            <div class="row collapse">
+                <div class="small-11 small-centered medium-11 medium-centered large-12 large-uncentered column">
+                    <?php get_search_form(); ?>
                 </div>
             </div>
         </section>

@@ -1,8 +1,12 @@
 <?php get_header(); ?>
     <section class="conteudo-pagina">
         <div class="row">
-            <div class="pong-breadcrumbs small-12 medium-12 large-12 column text-right">
-                Início / <a href="#">Lorem ipsum</a>
+            <div class="pong-breadcrumbs small-11 small-centered medium-11 medium-centered large-12 large-uncentered column text-right">
+                <?php
+                    if ( function_exists('yoast_breadcrumb') ) {
+                        yoast_breadcrumb('<span id="breadcrumbs">','</span>');
+                    }
+                ?>
             </div>
         </div>
 
