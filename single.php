@@ -2,7 +2,11 @@
     <section class="conteudo-post">
         <div class="row">
             <div class="pong-breadcrumbs small-12 medium-12 large-12 column text-right">
-                Início / Categoria / <a href="#">Lorem ipsum</a>
+                <?php
+                    if ( function_exists('yoast_breadcrumb') ) {
+                        yoast_breadcrumb('<span id="breadcrumbs">','</span>');
+                    }
+                ?>
             </div>
         </div>
 
@@ -15,7 +19,7 @@
                                 <div class="post-titulo text-center">
                                     <?php the_title('<h1>', '</h1>'); ?>
                                     <?php the_time('j \d\e F \d\e Y'); ?> - <?php the_author_posts_link(); ?> - <?php comments_popup_link('Nenhum comentário', '1 comentário', '% comentários', 'comments-link', ''); ?><br>
-                                    Tempo estimado de leitura: XX minutos
+                                    Tempo estimado de leitura: <?php echo do_shortcode('[est_time]'); ?>
                                 </div>
 
                                 <div class="post-texto">

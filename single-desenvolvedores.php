@@ -19,7 +19,7 @@
                 <?php if ( $devs_query->have_posts() ): ?>
                     <?php while ( $devs_query->have_posts() ) : $devs_query->the_post(); ?>
                         <div class="pagina-titulo text-center">
-                            <h1>Desenvolvedores</h1>
+                            <h1>Desenvolvedores e estúdios potiguares</h1>
                         </div>
 
                         <div class="pagina-texto">
