@@ -14,6 +14,9 @@
     </head>
 
     <body <?php body_class(); ?>>
+
+    <?php the_field('google_analytics', 'option'); ?>
+
         <header>
             <div class="area-logo row">
                 <div class="small-11 small-centered medium-11 medium-centered large-12 large-uncentered column">
@@ -28,8 +31,8 @@
                                 pong_the_custom_logo();
                             ?>
                         </div>
-                        <div class="banner small-12 medium-9 large-9 column show-for-medium-up">
-                            
+                        <div class="banner small-12 medium-9 large-9 column text-center">
+                            <?php the_field('banner_publicidade', 'option'); ?>
                         </div>
                     </div>
                 </div>
