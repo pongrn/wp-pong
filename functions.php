@@ -108,15 +108,23 @@ register_sidebar( array(
 ) );
 
 /* Custom Post Type: Desenvolvedores(as) */
-include(TEMPLATEPATH . '/inc/devs-posttype.php');
+include_once( get_stylesheet_directory() . '/inc/devs-posttype.php');
 
-/* ACF - Página de opções do tema */
-if( function_exists('acf_add_options_page') ) {
-    acf_add_options_page(array(
-        'page_title'    => 'Opções do site',
-        'menu_title'    => 'Opções do site',
-        'menu_slug'     => 'opcoes-site',
-        'capability'    => 'edit_posts',
-        'redirect'      => false
-    ));
+/* Integração do ACF ao tema */
+add_filter('acf/settings/path', 'my_acf_settings_path');
+
+function my_acf_settings_path( $path ) {
+    $path = get_stylesheet_directory() . '/inc/acf/';
+    return $path;  
 }
+
+add_filter('acf/settings/dir', 'my_acf_settings_dir');
+
+function my_acf_settings_dir( $dir ) {
+    $dir = get_stylesheet_directory_uri() . '/inc/acf/';
+    return $dir;
+}
+
+include_once( get_stylesheet_directory() . '/inc/acf/acf.php' );
+include_once( get_stylesheet_directory() . '/inc/custom-fields.php' );
+include_once( get_stylesheet_directory() . '/inc/options.php' );
