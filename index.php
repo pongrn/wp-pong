@@ -105,7 +105,7 @@
                 <div class="slideshow-logos">
                     <?php
                         $args = array(
-                            'post_type' => 'desenvolvedores',
+                            'post_type' => 'devs',
                         );
 
                         $devs_query = new WP_Query( $args );
@@ -114,7 +114,7 @@
                         <?php while ( $devs_query->have_posts() ) : $devs_query->the_post(); ?>
                             <div class="slide">
                                 <a href="<?php the_permalink(); ?>">
-                                    <?php the_post_thumbnail('thumbnail-devs'); ?>
+                                    <?php the_post_thumbnail('thumbnail-devs-small'); ?>
                                 </a>
                             </div>
                         <?php endwhile; ?>

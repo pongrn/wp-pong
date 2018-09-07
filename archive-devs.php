@@ -25,17 +25,26 @@
                     <?php /* Exibição por autor */ } elseif (is_author()) { ?>
                     <p>Todos os posts do(a) autor(a) <?php the_author(); ?></p>
                     <?php /* Caso o arquivamento deva ser exibido em uma Página estática */ } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
-                    <p>Arquivo do Site</p>
+                    <p>Arquivo do site</p>
                     <?php } ?>
                 </div>
+                <div class="pagina-titulo text-center">
+                    <h1>Desenvolvedores e estúdios potiguares</h1>
+                </div>
+                <div class="row">
                 <?php if (have_posts()) : ?>
                     <?php while (have_posts()) : the_post(); ?>
-                        <div class="pagina-titulo">
-                            <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-                            <?php the_time('j \d\e F \d\e Y'); ?>
+                        <div class="small-12 medium-4 large-4 column left">
+                            <div class="pagina-titulo">
+                                <a href="<?php the_permalink(); ?>">
+                                    <?php the_post_thumbnail('thumbnail-devs'); ?>
+                                </a>
+                                <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+                            </div>
                         </div>
                     <?php endwhile; ?>
                 <?php else : ?>
+                </div>
                     <div class="post-404 pagina-titulo text-center">
                         <h1>404 - Not Found</h1>
                         <p>Post não encontrado.</p>

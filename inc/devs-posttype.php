@@ -1,56 +1,65 @@
 <?php
 if ( ! function_exists('devs_post_type') ) {
-    function devs_post_type() {
-        $labels = array(
-            'name'                  => _x( 'Desenvolvedores(as)', 'Post Type General Name', 'pong_rn' ),
-            'singular_name'         => _x( 'Desenvolvedor(a)', 'Post Type Singular Name', 'pong_rn' ),
-            'menu_name'             => __( 'Devs', 'pong_rn' ),
-            'name_admin_bar'        => __( 'Desenvolvedor(a)', 'pong_rn' ),
-            'archives'              => __( 'Arquivo de Desenvolvedores(as)', 'pong_rn' ),
-            'attributes'            => __( 'Atributos de Desenvolvedores(as)', 'pong_rn' ),
-            'parent_item_colon'     => __( 'Desenvolvedor(a) pai:', 'pong_rn' ),
-            'all_items'             => __( 'Todos os(as) devs', 'pong_rn' ),
-            'add_new_item'          => __( 'Adicionar novo item', 'pong_rn' ),
-            'add_new'               => __( 'Adicionar novo', 'pong_rn' ),
-            'new_item'              => __( 'Novo item', 'pong_rn' ),
-            'edit_item'             => __( 'Editar Item', 'pong_rn' ),
-            'update_item'           => __( 'Atualizar Item', 'pong_rn' ),
-            'view_item'             => __( 'Visualizar Item', 'pong_rn' ),
-            'view_items'            => __( 'Visualizar Itens', 'pong_rn' ),
-            'search_items'          => __( 'Buscar item', 'pong_rn' ),
-            'not_found'             => __( 'Não encontrado', 'pong_rn' ),
-            'not_found_in_trash'    => __( 'Não encontrado na lixeira', 'pong_rn' ),
-            'featured_image'        => __( 'Imagem de destaque', 'pong_rn' ),
-            'set_featured_image'    => __( 'Definir imagem de destaque', 'pong_rn' ),
-            'remove_featured_image' => __( 'Remover imagem de destaque', 'pong_rn' ),
-            'use_featured_image'    => __( 'Usar como imagem de destaque', 'pong_rn' ),
-            'insert_into_item'      => __( 'Inserir no item', 'pong_rn' ),
-            'uploaded_to_this_item' => __( 'Enviado para este item', 'pong_rn' ),
-            'items_list'            => __( 'Lista de itens', 'pong_rn' ),
-            'items_list_navigation' => __( 'Navegação', 'pong_rn' ),
-            'filter_items_list'     => __( 'Filtro', 'pong_rn' ),
-        );
-        $args = array(
-            'label'                 => __( 'Desenvolvedores', 'pong_rn' ),
-            'description'           => __( 'Desenvolvedor(a), equipe ou estúdio independente', 'pong_rn' ),
-            'labels'                => $labels,
-            'supports'              => array( 'title', 'thumbnail', 'revisions' ),
-            'hierarchical'          => false,
-            'public'                => true,
-            'show_ui'               => true,
-            'show_in_menu'          => true,
-            'menu_position'         => 25,
-            'menu_icon'             => 'dashicons-editor-code',
-            'show_in_admin_bar'     => true,
-            'show_in_nav_menus'     => true,
-            'can_export'            => true,
-            'has_archive'           => true,
-            'exclude_from_search'   => false,
-            'publicly_queryable'    => true,
-            'capability_type'       => 'page',
-            'show_in_rest'          => false,
-        );
-        register_post_type( 'desenvolvedores', $args );
-    }
-    add_action( 'init', 'devs_post_type', 0 );
+
+// Register Custom Post Type
+function devs_post_type() {
+	$labels = array(
+		'name'                  => _x( 'Desenvolvedores', 'Post Type General Name', 'devs' ),
+		'singular_name'         => _x( 'Desenvolvedor', 'Post Type Singular Name', 'devs' ),
+		'menu_name'             => __( 'Desenvolvedores', 'devs' ),
+		'name_admin_bar'        => __( 'Desenvolvedores', 'devs' ),
+		'archives'              => __( 'Arquivo de devs', 'devs' ),
+		'attributes'            => __( 'Atributos de dev', 'devs' ),
+		'parent_item_colon'     => __( 'Dev pai:', 'devs' ),
+		'all_items'             => __( 'Todos os devs', 'devs' ),
+		'add_new_item'          => __( 'Adicionar dev', 'devs' ),
+		'add_new'               => __( 'Adicionar novo', 'devs' ),
+		'new_item'              => __( 'Novo dev', 'devs' ),
+		'edit_item'             => __( 'Editar dev', 'devs' ),
+		'update_item'           => __( 'Atualizar dev', 'devs' ),
+		'view_item'             => __( 'Visualizar dev', 'devs' ),
+		'view_items'            => __( 'Visualizar devs', 'devs' ),
+		'search_items'          => __( 'Buscar devs', 'devs' ),
+		'not_found'             => __( 'Não encontrado', 'devs' ),
+		'not_found_in_trash'    => __( 'Não encontrado na lixeira', 'devs' ),
+		'featured_image'        => __( 'Logotipo', 'devs' ),
+		'set_featured_image'    => __( 'Inserir logotipo', 'devs' ),
+		'remove_featured_image' => __( 'Remover logotipo', 'devs' ),
+		'use_featured_image'    => __( 'Usar como logotipo', 'devs' ),
+		'insert_into_item'      => __( 'Inserir no item', 'devs' ),
+		'uploaded_to_this_item' => __( 'Enviado para este dev', 'devs' ),
+		'items_list'            => __( 'Lista de devs', 'devs' ),
+		'items_list_navigation' => __( 'Navegação na lista', 'devs' ),
+		'filter_items_list'     => __( 'Filtro de devs', 'devs' ),
+	);
+	$rewrite = array(
+		'slug'                  => 'devs',
+		'with_front'            => true,
+		'pages'                 => true,
+		'feeds'                 => true,
+	);
+	$args = array(
+		'label'                 => __( 'Desenvolvedor', 'devs' ),
+		'description'           => __( 'Desenvolvedores, equipes e estúdios independentes potiguares', 'devs' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'editor', 'thumbnail', 'revisions' ),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 25,
+		'menu_icon'             => 'dashicons-editor-code',
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => true,
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'rewrite'               => $rewrite,
+		'capability_type'       => 'post',
+		'show_in_rest'          => true,
+	);
+	register_post_type( 'devs', $args );
+}
+add_action( 'init', 'devs_post_type', 0 );
 }
