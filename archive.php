@@ -25,7 +25,7 @@
                     <?php /* Exibição por autor */ } elseif (is_author()) { ?>
                     <p>Todos os posts do(a) autor(a) <?php the_author(); ?></p>
                     <?php /* Caso o arquivamento deva ser exibido em uma Página estática */ } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
-                    <p>Arquivo do Site</p>
+                    <p>Arquivo do site</p>
                     <?php } ?>
                 </div>
                 <?php if (have_posts()) : ?>

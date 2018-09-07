@@ -82,8 +82,8 @@ class Foundation_Walker_Nav_Menu extends Walker_Nav_Menu {
 /* Suporte a imagens destacadas */
 add_theme_support( 'post-thumbnails' );
 add_image_size( 'thumbnail-index', 800, 600, array('center', 'center') );
-add_image_size( 'thumbnail-devs', 350, 250, array('center', 'center') );
-add_image_size( 'thumbnail-devs-info', 500, 360, array('center', 'center') );
+add_image_size( 'thumbnail-devs-small', 350, 250, array('center', 'center') );
+add_image_size( 'thumbnail-devs', 400, 250, array('center', 'center') );
 
 /* Suporte a widgets: Barra Lateral */
 register_sidebar( array(
