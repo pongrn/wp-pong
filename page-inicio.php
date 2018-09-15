@@ -3,7 +3,7 @@
     <section class="destaques">
         <div class="row">
             <div class="secao-titulo small-12 medium-12 large-12 column">
-                <h1>Destaques - Início Estático</h1>
+                <h1>Destaques</h1>
             </div>
         </div>
 
@@ -128,7 +128,7 @@
     <section class="conteudo">
         <div class="row">
             <div class="secao-titulo small-12 medium-12 large-12 column">
-                <h1>Últimas notícias</h1>
+                <h1>Últimas notícias - <a href="/blog/">Visite nosso blog!</a></h1>
             </div>
         </div>
 

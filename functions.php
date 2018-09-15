@@ -101,7 +101,7 @@ register_sidebar( array(
     'name'          => __( 'Widgets: Rodapé', 'pong-rn' ),
     'id'            => 'widgets-rodape',
     'description'   => __( 'Adicione Widgets para exibi-los no Rodapé de seu site.', 'pong-rn' ),
-    'before_widget' => '<div class="widget small-12 medium-4 large-4 left column">',
+    'before_widget' => '<div class="widget small-12 medium-3 large-3 left column">',
     'after_widget'  => '</div>',
     'before_title'  => '<h1>',
     'after_title'   => '</h1>',
