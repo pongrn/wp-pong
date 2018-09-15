@@ -35,7 +35,7 @@
                 <?php if (have_posts()) : ?>
                     <?php while (have_posts()) : the_post(); ?>
                         <div class="small-12 medium-4 large-4 column left">
-                            <div class="pagina-titulo">
+                            <div class="pagina-titulo arquivos-thumb">
                                 <a href="<?php the_permalink(); ?>">
                                     <?php the_post_thumbnail('thumbnail-devs'); ?>
                                 </a>
