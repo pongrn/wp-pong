@@ -108,7 +108,7 @@ register_sidebar( array(
 ) );
 
 /* Custom Post Type: Desenvolvedores(as) */
-include_once( get_stylesheet_directory() . '/inc/devs-posttype.php');
+include_once( get_stylesheet_directory() . '/inc/pong_devs.php');
 
 /* Integração do ACF ao tema */
 add_filter('acf/settings/path', 'my_acf_settings_path');
