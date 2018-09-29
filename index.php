@@ -3,7 +3,7 @@
     <section class="conteudo">
         <div class="row">
             <div class="secao-titulo small-12 medium-12 large-12 column">
-                <h1>Últimas notícias - BLOG</h1>
+                <h1>Blog do PONG</h1>
             </div>
         </div>
 
