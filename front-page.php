@@ -139,7 +139,7 @@
                     $inicio_args = array(
                         'posts_per_page' => 9
                     );
-                    
+
                     $inicio_query = new WP_Query( $inicio_args );
                     ?>
                     <?php if ( $inicio_query->have_posts() ): ?>
