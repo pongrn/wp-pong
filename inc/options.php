@@ -8,6 +8,7 @@ if( function_exists('acf_add_options_page') ) {
         'menu_title'    => 'Opções do site',
         'menu_slug'     => 'opcoes-site',
         'capability'    => 'edit_posts',
-        'redirect'      => false
+        'redirect'      => false,
+        'position'      => '28'
     ));
 }

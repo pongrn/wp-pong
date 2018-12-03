@@ -66,7 +66,7 @@ function foundation_nav_menu_classes($classes, $item){
     if (in_array("menu-item-has-children", $classes)){
         array_push($classes, "has-dropdown not-click");
     }
-    
+
     return $classes;
 }
 add_filter('nav_menu_css_class', 'foundation_nav_menu_classes', 10, 2);
@@ -107,15 +107,12 @@ register_sidebar( array(
     'after_title'   => '</h1>',
 ) );
 
-/* Custom Post Type: Desenvolvedores(as) */
-include_once( get_stylesheet_directory() . '/inc/pong_devs.php');
-
 /* Integração do ACF ao tema */
 add_filter('acf/settings/path', 'my_acf_settings_path');
 
 function my_acf_settings_path( $path ) {
     $path = get_stylesheet_directory() . '/inc/acf/';
-    return $path;  
+    return $path;
 }
 
 add_filter('acf/settings/dir', 'my_acf_settings_dir');
@@ -128,3 +125,8 @@ function my_acf_settings_dir( $dir ) {
 include_once( get_stylesheet_directory() . '/inc/acf/acf.php' );
 include_once( get_stylesheet_directory() . '/inc/custom-fields.php' );
 include_once( get_stylesheet_directory() . '/inc/options.php' );
+
+/* Custom Post Types: desenvolvedores, jogos e empresas */
+include_once( get_stylesheet_directory() . '/inc/pong_devs.php');
+include_once( get_stylesheet_directory() . '/inc/pong_jogos.php');
+include_once( get_stylesheet_directory() . '/inc/pong_empresas.php');
