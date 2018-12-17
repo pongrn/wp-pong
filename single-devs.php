@@ -22,7 +22,7 @@
                             <div class="devs-wrapper">
                                 <div class="devs-info row">
                                     <div class="dev-logo small-12 medium-4 large-4 column left text-center">
-                                        <?php the_post_thumbnail('thumbnail-devs'); ?>
+                                        <?php the_post_thumbnail('logo-devs'); ?>
                                     </div>
                                     <div class="dev-texto small-12 medium-8 large-8 column right">
                                         <?php the_title('<h2>', '</h2>'); ?>
