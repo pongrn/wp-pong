@@ -83,7 +83,11 @@ class Foundation_Walker_Nav_Menu extends Walker_Nav_Menu {
 add_theme_support( 'post-thumbnails' );
 add_image_size( 'thumbnail-index', 800, 600, array('center', 'center') );
 add_image_size( 'thumbnail-devs-small', 350, 250, array('center', 'center') );
-add_image_size( 'thumbnail-devs', 500, 350, array('center', 'center') );
+add_image_size( 'thumbnail-jogos-small', 350, 250, array('center', 'center') );
+add_image_size( 'thumbnail-empresas-small', 350, 250, array('center', 'center') );
+add_image_size( 'logo-devs', 500, 350, array('center', 'center') );
+add_image_size( 'logo-jogos', 500, 350, array('center', 'center') );
+add_image_size( 'logo-empresas', 500, 350, array('center', 'center') );
 
 /* Suporte a widgets: Barra Lateral */
 register_sidebar( array(
@@ -123,7 +127,7 @@ function my_acf_settings_dir( $dir ) {
 }
 
 include_once( get_stylesheet_directory() . '/inc/acf/acf.php' );
-include_once( get_stylesheet_directory() . '/inc/custom-fields.php' );
+// include_once( get_stylesheet_directory() . '/inc/custom-fields.php' );
 include_once( get_stylesheet_directory() . '/inc/options.php' );
 
 /* Custom Post Types: desenvolvedores, jogos e empresas */
