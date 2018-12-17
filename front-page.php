@@ -125,10 +125,74 @@
         </div>
     </section>
 
+    <section class="jogos">
+        <div class="row">
+            <div class="secao-titulo small-12 medium-12 large-12 column">
+                <h1>Jogos independentes</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="small-11 small-centered medium-11 medium-centered large-12 large-uncentered column">
+                <div class="slideshow-logos">
+                    <?php
+                        $args = array(
+                            'post_type' => 'jogos',
+                        );
+
+                        $devs_query = new WP_Query( $args );
+                    ?>
+                    <?php if ( $devs_query->have_posts() ): ?>
+                        <?php while ( $devs_query->have_posts() ) : $devs_query->the_post(); ?>
+                            <div class="slide">
+                                <a href="<?php the_permalink(); ?>">
+                                    <?php the_post_thumbnail('thumbnail-devs-small'); ?>
+                                </a>
+                            </div>
+                        <?php endwhile; ?>
+                    <?php endif; ?>
+                    <?php wp_reset_postdata(); ?>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="empresas">
+        <div class="row">
+            <div class="secao-titulo small-12 medium-12 large-12 column">
+                <h1>Empresas e organizações</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="small-11 small-centered medium-11 medium-centered large-12 large-uncentered column">
+                <div class="slideshow-logos">
+                    <?php
+                        $args = array(
+                            'post_type' => 'empresas',
+                        );
+
+                        $devs_query = new WP_Query( $args );
+                    ?>
+                    <?php if ( $devs_query->have_posts() ): ?>
+                        <?php while ( $devs_query->have_posts() ) : $devs_query->the_post(); ?>
+                            <div class="slide">
+                                <a href="<?php the_permalink(); ?>">
+                                    <?php the_post_thumbnail('thumbnail-devs-small'); ?>
+                                </a>
+                            </div>
+                        <?php endwhile; ?>
+                    <?php endif; ?>
+                    <?php wp_reset_postdata(); ?>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="conteudo">
         <div class="row">
             <div class="secao-titulo small-12 medium-12 large-12 column">
-                <h1>Últimas notícias - <a href="/blog/">Visite nosso blog!</a></h1>
+                <h1>Últimas notícias - <a href="#">Visite nosso blog!</a></h1>
             </div>
         </div>
 
