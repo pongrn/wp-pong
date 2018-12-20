@@ -8,7 +8,8 @@
 
                     <div class="creditos row">
                         <div class="small-12 medium-12 large-12 column text-center">
-                            &#169; 2014 - <?php echo date('Y'); ?> <?php bloginfo('name');?>: <?php bloginfo('description');?><br> Desenvolvido por <a target="_blank" href="https://giancarlosilva.com.br">Giancarlo
+                            &#169; 2014 - <?php echo date('Y'); ?> <?php bloginfo('name');?><br>
+                            Desenvolvido por <a target="_blank" href="https://giancarlosilva.com.br">Giancarlo
                                 Silva</a><br>
                             <a target="_blank" href="https://giancarlosilva.com.br/humans.txt">humans.txt</a>
                         </div>
